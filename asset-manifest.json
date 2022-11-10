@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/classiguitarist/static/css/main.7db80854.css",
+    "main.css": "/classiguitarist/static/css/main.ae6a4832.css",
     "main.js": "/classiguitarist/static/js/main.c0b4b821.js",
     "static/media/hero.jpg": "/classiguitarist/static/media/hero.786d389240dee089e571.jpg",
     "static/media/test4.jpg": "/classiguitarist/static/media/test4.7e847da30ab7f8f33064.jpg",
@@ -13,11 +13,11 @@
     "static/media/ukulele-icon.svg": "/classiguitarist/static/media/ukulele-icon.e8c27c2e889aadd810847b6028d73cfd.svg",
     "index.html": "/classiguitarist/index.html",
     "static/media/piano-icon.svg": "/classiguitarist/static/media/piano-icon.aa7997f856c40def74812a4a9a0cd6da.svg",
-    "main.7db80854.css.map": "/classiguitarist/static/css/main.7db80854.css.map",
+    "main.ae6a4832.css.map": "/classiguitarist/static/css/main.ae6a4832.css.map",
     "main.c0b4b821.js.map": "/classiguitarist/static/js/main.c0b4b821.js.map"
   },
   "entrypoints": [
-    "static/css/main.7db80854.css",
+    "static/css/main.ae6a4832.css",
     "static/js/main.c0b4b821.js"
   ]
 }

@@ -1,0 +1,283 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//GLOBAL SETTINGS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$light: #caf0f8;
+$medium: #00b4d8;
+$dark: #345c91;
+body {
+  font-family: "Oxygen", sans-serif;
+}
+
+h1 {
+  color: white;
+  font-family: "Lobster", cursive;
+  font-size: 3.6rem;
+}
+h2 {
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+}
+h3 {
+  color: $light;
+}
+span {
+  color: $medium;
+}
+
+//NAVBAR
+
+nav {
+  height: 10vh;
+  background-color: $light;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+
+  .link {
+    color: $dark;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}
+
+.navbar-nav {
+  background-color: #caf0f8cc;
+  border-radius: 0.3rem;
+  padding: 1rem;
+
+  gap: 1rem;
+  text-align: center;
+}
+.navbar-toggler {
+  border: none;
+  font-size: 1.5rem;
+  color: $dark;
+}
+//HERO
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./images/hero.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 4rem solid $light;
+
+  .btn-primary {
+    width: 8rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    outline: 1px solid white;
+    background-color: transparent;
+    border: none;
+    .link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+.logo {
+  width: 4rem;
+  transform: scaleX(-1);
+}
+.navbar-collapse {
+  text-align: center;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  gap: 2rem;
+  background-color: #343d91a6;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(8px);
+  position: fixed;
+  top: 25%;
+  right: 2.5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.social-icon {
+  width: 3rem;
+}
+
+.lessons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: $light;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  justify-content: center;
+  align-items: center;
+
+  .cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    .card {
+      padding: 1rem;
+      display: flex;
+      border-radius: 1rem;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      .btns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .card-body {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .card-title {
+        text-align: center;
+      }
+    }
+    .inst-icon {
+      width: 5rem;
+      margin: auto;
+    }
+  }
+}
+
+//TESTIMONIALS
+
+.testimonials {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  justify-content: center;
+  h2 {
+    color: $dark;
+  }
+  .carousel {
+    width: 90vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    max-width: 40rem;
+    .carousel-img {
+      width: 40rem;
+      height: 25rem;
+      object-fit: cover;
+      object-position: center;
+    }
+    .carousel-caption {
+      background-color: #345c9177;
+      backdrop-filter: blur(5px);
+      border-radius: 0.4rem;
+      max-height: 30vh;
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $dark;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  gap: 2rem;
+  h2 {
+    color: white;
+  }
+  .about-content {
+    display: flex;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("./images/sean-about.JPG");
+    background-position: center;
+    background-attachment: fixed;
+    object-fit: cover;
+    font-size: 1.2rem;
+    p {
+      backdrop-filter: blur(5px);
+    }
+    background-repeat: no-repeat;
+    color: white;
+    max-width: 30rem;
+    background-color: $light;
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.about-img {
+  width: 30vw;
+  height: 30vw;
+  object-fit: contain;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $light;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  gap: 1.5rem;
+  h3 {
+    color: $light;
+  }
+  .contact-desc {
+    color: $dark;
+    text-align: center;
+  }
+}
+.contact-methods {
+  background-color: $dark;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  gap: 1rem;
+  .contact-icon {
+    width: 3rem;
+  }
+}
+.contact-item {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}

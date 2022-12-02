@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/classiguitarist/static/css/main.8242da27.css",
-    "main.js": "/classiguitarist/static/js/main.bee9ad2a.js",
+    "main.css": "/classiguitarist/static/css/main.0f4e06af.css",
+    "main.js": "/classiguitarist/static/js/main.82467bda.js",
+    "static/media/sean-intro.mp4": "/classiguitarist/static/media/sean-intro.f16b94276bd7cecf2e45.mp4",
     "static/media/hero.jpg": "/classiguitarist/static/media/hero.786d389240dee089e571.jpg",
     "static/media/test4.jpg": "/classiguitarist/static/media/test4.7e847da30ab7f8f33064.jpg",
     "static/media/test5.jpg": "/classiguitarist/static/media/test5.34df63a141867f3b49c8.jpg",
@@ -16,11 +17,11 @@
     "static/media/ukulele-icon.svg": "/classiguitarist/static/media/ukulele-icon.e8c27c2e889aadd810847b6028d73cfd.svg",
     "index.html": "/classiguitarist/index.html",
     "static/media/piano-icon.svg": "/classiguitarist/static/media/piano-icon.aa7997f856c40def74812a4a9a0cd6da.svg",
-    "main.8242da27.css.map": "/classiguitarist/static/css/main.8242da27.css.map",
-    "main.bee9ad2a.js.map": "/classiguitarist/static/js/main.bee9ad2a.js.map"
+    "main.0f4e06af.css.map": "/classiguitarist/static/css/main.0f4e06af.css.map",
+    "main.82467bda.js.map": "/classiguitarist/static/js/main.82467bda.js.map"
   },
   "entrypoints": [
-    "static/css/main.8242da27.css",
-    "static/js/main.bee9ad2a.js"
+    "static/css/main.0f4e06af.css",
+    "static/js/main.82467bda.js"
   ]
 }

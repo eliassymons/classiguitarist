@@ -13,10 +13,13 @@ function Testimonials() {
           <img className="carousel-img" src={test1} alt="first" />
           <Carousel.Caption>
             <p className="quote">
-              "Best guitar lessons in Encinitas! Sean is a great teacher and
-              great with kids. Highly recommend!"
+              "This guitar teacher is a jewel and we are so lucky to have him!
+              My daughter Lilliana (10 years old) plays classical guitar and has
+              had several guitar teachers in the past. Sean definitely stands
+              apart from the others. He is reliable, consistent, dependable &
+              trustworthy."
             </p>
-            <p>-Greg L.</p>
+            <p>-Ursula V.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={6000}>
@@ -44,10 +47,10 @@ function Testimonials() {
           <img className="carousel-img" src={test4} alt="first" />
           <Carousel.Caption>
             <p className="quote">
-              "Sean definitely stands apart from the others. He is reliable,
-              consistent, dependable & trustworthy."
+              "Best guitar lessons in Encinitas! Sean is a great teacher and
+              great with kids. Highly recommend!"
             </p>
-            <p>-Ursula V.</p>
+            <p>-Greg L.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={6000}>

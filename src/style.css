@@ -10961,7 +10961,7 @@ h3, .h3 {
 }
 
 span {
-  color: #00b4d8;
+  color: #caf0f8;
 }
 
 nav {
@@ -10984,8 +10984,12 @@ nav .link {
   background-color: rgba(202, 240, 248, 0.8);
   border-radius: 0.3rem;
   padding: 1rem;
+  align-items: center;
   gap: 1rem;
   text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-toggler {
@@ -10996,7 +11000,7 @@ nav .link {
 
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/hero.jpg");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11011,14 +11015,43 @@ nav .link {
 .hero .btn-primary {
   width: 8rem;
   margin-top: 2rem;
-  font-size: 1rem;
-  border-radius: 2rem;
-  outline: 1px solid white;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.582);
+  padding: 1rem;
   background-color: transparent;
-  border: none;
 }
 .hero .btn-primary .link {
   text-decoration: none;
+  color: white;
+}
+.hero .btn-primary:hover {
+  scale: 1.02;
+  border: 1px solid white;
+}
+.hero .btn-primary:focus {
+  background-color: transparent;
+}
+
+.offcanvas {
+  background-color: #caf0f8;
+}
+.offcanvas .navbar-nav {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.offcanvas .navbar-nav .link {
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  width: 100;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #345c91;
+}
+.offcanvas .navbar-nav .link:hover,
+.offcanvas .navbar-nav .link::after,
+.offcanvas .navbar-nav .link:focus {
   color: white;
 }
 
@@ -11036,20 +11069,27 @@ nav .link {
   flex-direction: column;
   z-index: 999;
   gap: 2rem;
-  background-color: rgba(52, 61, 145, 0.6509803922);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   padding: 0.7rem;
-  border-radius: 0.5rem;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
   position: fixed;
   top: 25%;
   right: 2.5%;
   transform: translateY(-50%);
 }
-
-.social-icon {
+.socials .email-icon,
+.socials .phone-icon {
   width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  background-color: #345c91;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.socials .email-icon {
+  padding: 0.3rem;
+  border-radius: 10px;
+  border: 0.2rem solid #345c91;
+  height: auto;
 }
 
 .lessons {
@@ -11074,16 +11114,23 @@ nav .link {
 .lessons .cards .card {
   padding: 1rem;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 23rem;
   border-radius: 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .lessons .cards .card .btns {
   width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
   display: flex;
   justify-content: center;
 }
 .lessons .cards .card .card-body {
   width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -11096,12 +11143,35 @@ nav .link {
   margin: auto;
 }
 
+.video-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #345c91;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.video-container h2, .video-container .h2 {
+  color: #caf0f8;
+}
+.video-container .intro-video {
+  width: 90vw;
+  max-width: 40rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
 .testimonials {
   width: 100%;
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 2rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
   justify-content: center;
@@ -11123,11 +11193,41 @@ nav .link {
      object-position: center;
 }
 .testimonials .carousel .carousel-caption {
-  background-color: rgba(52, 92, 145, 0.4666666667);
+  background-color: rgba(0, 0, 0, 0.349);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  border-radius: 0.4rem;
+  border-radius: 0.8rem;
   max-height: 30vh;
+}
+.testimonials .carousel .carousel-caption .quote {
+  font-style: italic;
+}
+.testimonials .more-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/testimonials/more-testimonials.png");
+  background-position: center;
+  background-size: cover;
+  width: 40rem;
+  max-width: 90vw;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonials .more-testimonials h3, .testimonials .more-testimonials .h3 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.582);
+  padding: 1rem;
+}
+.testimonials .more-testimonials h3:hover, .testimonials .more-testimonials .h3:hover {
+  border: 1px solid white;
+}
+.testimonials .more-testimonials .test-link {
+  text-decoration: none;
+}
+.testimonials .more-testimonials .test-link:hover {
+  scale: 1.02;
 }
 
 .about {
@@ -11148,7 +11248,7 @@ nav .link {
   display: flex;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./images/sean-about.JPG");
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   -o-object-fit: cover;
      object-fit: cover;
   font-size: 1.2rem;
@@ -11165,6 +11265,7 @@ nav .link {
 .about .about-content p {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+  font-size: 1.1rem;
 }
 
 .about-img {
@@ -11211,4 +11312,76 @@ nav .link {
   gap: 2rem;
   align-items: center;
   justify-content: center;
+}
+
+.suzuki {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  gap: 2rem;
+}
+.suzuki h3, .suzuki .h3 {
+  color: #345c91;
+  text-align: center;
+}
+.suzuki ul {
+  width: 90vw;
+  max-width: 40rem;
+}
+.suzuki h2, .suzuki .h2 {
+  color: #345c91;
+  text-align: center;
+}
+
+.benefits {
+  background-color: #345c91;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  gap: 2rem;
+}
+.benefits h2, .benefits .h2 {
+  color: white;
+}
+.benefits .benefits-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.benefits .benefits-img {
+  width: 90vw;
+  max-width: 30rem;
+}
+.benefits .video {
+  width: 90vw;
+  max-width: 40rem;
+  aspect-ratio: auto;
+}
+
+.about h2, .about .h2,
+.testimonials h2,
+.testimonials .h2,
+.suzuki h2,
+.suzuki .h2,
+.video-container h2,
+.video-container .h2,
+.benefits h2,
+.benefits .h2,
+.socials h2,
+.socials .h2 {
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/hero-mobile.jpg");
+  }
 }

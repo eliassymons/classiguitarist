@@ -4,10 +4,12 @@ import { Link } from "react-scroll";
 function Hero() {
   return (
     <div className="hero" id="hero">
-      <h1>
-        Classi<span>Guitarist</span>
-      </h1>
-      <h3>Lessons for Guitar, Piano, and Ukulele</h3>
+      <div className="hero-main">
+        <h1>
+          Classi<span>Guitarist</span>
+        </h1>
+        <h3>Lessons for Guitar, Piano, and Ukulele</h3>
+      </div>
       <Button variant="primary">
         <Link
           className="link"

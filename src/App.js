@@ -6,6 +6,9 @@ import Lessons from "./components/Lessons";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonials from "./components/Testimonials";
+import Suzuki from "./components/Suzuki";
+import Benefits from "./components/Benefits";
+import Video from "./components/Video";
 
 function App() {
   return (
@@ -13,9 +16,12 @@ function App() {
       <Header /> <Socials />
       <Hero />
       <Lessons />
+      <Video />
       <Testimonials />
       <About />
       <Contact />
+      <Suzuki />
+      <Benefits />
     </div>
   );
 }

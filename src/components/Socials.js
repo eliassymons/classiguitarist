@@ -4,8 +4,12 @@ import email from "../images/Subtract.png";
 function Socials() {
   return (
     <div className="socials">
-      <img alt="phone" className="social-icon" src={phone} />
-      <img alt="email" className="social-icon" src={email} />
+      <a href="tel:123-456-7890">
+        <img alt="phone" className="phone-icon" src={phone} />
+      </a>
+      <a href="mailto: abc@example.com">
+        <img alt="email" className="email-icon" src={email} />
+      </a>
     </div>
   );
 }

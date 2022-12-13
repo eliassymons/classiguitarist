@@ -1,8 +1,10 @@
 import guitar from "../images/guitar-icon.svg";
 import ukulele from "../images/ukulele-icon.svg";
 import piano from "../images/piano-icon.svg";
+import suzuki from "../images/suzuki-logo.jpg";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import { Link } from "react-scroll";
 
 function Lessons() {
   return (
@@ -10,16 +12,33 @@ function Lessons() {
       <h2>Lessons</h2>
       <div className="cards">
         <Card style={{ width: "15rem" }}>
+          <img alt="suzuki" className="inst-icon" src={suzuki} />
+          <Card.Body className="card-body">
+            <Card.Title>Suzuki</Card.Title>
+            <Card.Text>
+              The Suzuki method teaches children how to play an instrument the
+              same way they learn to speak a language. 
+            </Card.Text>
+            <div className="btns">
+              {" "}
+              <Button variant="outline-primary">
+                <Link to="suzuki">Suzuki Method</Link>
+              </Button>
+            </div>
+          </Card.Body>
+        </Card>
+        <Card style={{ width: "15rem" }}>
           <img alt="guitar" className="inst-icon" src={guitar} />
           <Card.Body className="card-body">
             <Card.Title>Guitar</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Learn any style from rock and metal, to classical and jazz.
             </Card.Text>
             <div className="btns">
               {" "}
-              <Button variant="outline-primary">Go somewhere</Button>
+              <Button variant="outline-primary">
+                <Link to="contact">Guitar Lessons</Link>
+              </Button>
             </div>
           </Card.Body>
         </Card>
@@ -28,12 +47,14 @@ function Lessons() {
           <Card.Body className="card-body">
             <Card.Title>Piano</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Piano is a great foundational instrument, and a great way to
+              visualize music. 
             </Card.Text>
             <div className="btns">
               {" "}
-              <Button variant="outline-primary">Go somewhere</Button>
+              <Button variant="outline-primary">
+                <Link to="contact">Piano Lessons</Link>
+              </Button>
             </div>
           </Card.Body>
         </Card>
@@ -42,12 +63,14 @@ function Lessons() {
           <Card.Body className="card-body">
             <Card.Title>Ukulele</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              Get back from Hawaii recently and want something easy to keep
+              those island vibes going? This is the instrument you! 
             </Card.Text>
             <div className="btns">
               {" "}
-              <Button variant="outline-primary">Go somewhere</Button>
+              <Button variant="outline-primary">
+                <Link to="contact">Ukulele Lessons</Link>
+              </Button>
             </div>
           </Card.Body>
         </Card>

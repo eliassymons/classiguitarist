@@ -12,7 +12,7 @@ function Testimonials() {
         <Carousel.Item interval={6000}>
           <img className="carousel-img" src={test1} alt="first" />
           <Carousel.Caption>
-            <p className="quote">
+            <p className="ursula">
               "This guitar teacher is a jewel and we are so lucky to have him!
               My daughter Lilliana (10 years old) plays classical guitar and has
               had several guitar teachers in the past. Sean definitely stands

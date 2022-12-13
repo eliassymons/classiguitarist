@@ -11179,6 +11179,10 @@ nav .link {
   padding-bottom: 4rem;
   justify-content: center;
 }
+.testimonials .ursula {
+  font-size: 0.9rem;
+  font-style: italic;
+}
 .testimonials h2, .testimonials .h2 {
   color: #345c91;
 }

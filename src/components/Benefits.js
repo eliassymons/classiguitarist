@@ -5,10 +5,6 @@ function Benefits() {
   return (
     <div className="benefits" id="benefits">
       <h2>The Benefits of Music</h2>
-      <div className="benefits-content">
-        <img alt="benefits1" className="benefits-img" src={benefits2} />
-        <img alt="benefits2" className="benefits-img" src={benefits} />
-      </div>
       <iframe
         className="video"
         width="853"
@@ -18,7 +14,11 @@ function Benefits() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title="Embedded youtube"
-      />
+      />{" "}
+      <div className="benefits-content">
+        {/* <img alt="benefits1" className="benefits-img" src={benefits2} /> */}
+        <img alt="benefits2" className="benefits-img" src={benefits} />
+      </div>
     </div>
   );
 }

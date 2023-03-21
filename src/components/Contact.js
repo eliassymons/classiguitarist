@@ -11,13 +11,13 @@ function Contact() {
       <div className="contact-methods">
         <div className="contact-item">
           <h3>Phone:</h3>{" "}
-          <a href="tel:123-456-7890">
+          <a href="tel:828-850-2852">
             <img alt="phone-contact" className="contact-icon" src={phone} />
           </a>
         </div>
         <div className="contact-item">
           <h3>Email:</h3>
-          <a href="mailto: abc@example.com">
+          <a href="mailto: classiguitarist@gmail.com">
             <img
               alt="email-contact"
               className="contact-icon"

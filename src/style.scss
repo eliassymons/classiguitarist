@@ -11,7 +11,7 @@ $light: #caf0f8;
 $medium: #00b4d8;
 $dark: #345c91;
 body {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 h1 {
@@ -29,11 +29,32 @@ h3 {
 span {
   color: $light;
 }
-
+.btn-primary {
+  width: 10rem;
+  margin-top: 2rem;
+  background: $dark;
+  color: $dark;
+  border: none;
+  .link {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+  }
+}
+.btn-primary:hover {
+  color: white;
+  background: $light;
+  .link {
+    color: $dark;
+  }
+}
+// .btn-primary:focus {
+//   background-color: transparent;
+// }
 //NAVBAR
 
 nav {
-  height: 10vh;
   background-color: $light;
   box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
   z-index: 999;
@@ -63,6 +84,7 @@ nav {
 .navbar-toggler {
   border: none;
   font-size: 1.5rem;
+
   color: $dark;
 }
 //HERO
@@ -79,29 +101,6 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-bottom: 4rem solid $light;
-
-  .btn-primary {
-    width: 8rem;
-    margin-top: 2rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.582);
-    padding: 1rem;
-
-    background-color: transparent;
-
-    .link {
-      text-decoration: none;
-      color: white;
-    }
-  }
-  .btn-primary:hover {
-    scale: 1.02;
-    border: 1px solid white;
-  }
-  .btn-primary:focus {
-    background-color: transparent;
-  }
 }
 .offcanvas {
   background-color: $light;
@@ -117,13 +116,17 @@ nav {
       cursor: pointer;
       width: 100;
       font-size: 1.5rem;
-      font-weight: 400;
+      font-weight: 800;
       color: $dark;
+      background: linear-gradient(currentColor, currentColor) bottom / 0 0.1em
+        no-repeat;
+      transition: 0.4s ease background-size;
+      cursor: pointer;
     }
     .link:hover,
     .link::after,
     .link:focus {
-      color: white;
+      background-size: 100% 0.1em;
     }
   }
 }
@@ -175,7 +178,7 @@ nav {
   gap: 2rem;
   background-color: $light;
   align-items: center;
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 4rem;
   justify-content: center;
   align-items: center;
@@ -186,28 +189,29 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
+    .card:hover {
+      box-shadow: rgba(50, 50, 93, 0.18) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.2) 0px 8px 16px -8px;
+    }
     .card {
-      padding: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 1rem 0.5rem;
+      color: rgb(61, 66, 71);
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      min-height: 23rem;
-
-      border-radius: 1rem;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      min-height: 20rem;
+      background-color: white;
+      border: none;
+      border-radius: 0;
+      // box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      //   rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
       .card-text {
         text-align: center;
+        font-size: 1.2rem;
       }
-      .btns {
-        width: 100%;
-        position: absolute;
-        bottom: 1rem;
-        right: 0;
 
-        display: flex;
-        justify-content: center;
-      }
       .card-body {
         width: 100%;
         height: 100%;
@@ -219,10 +223,11 @@ nav {
       }
       .card-title {
         text-align: center;
+        font-weight: 700;
       }
     }
     .inst-icon {
-      width: 5rem;
+      width: 3rem;
       margin: auto;
     }
   }
@@ -246,7 +251,7 @@ nav {
   .intro-video {
     width: 90vw;
     max-width: 40rem;
-    border-radius: 1rem;
+
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -265,13 +270,11 @@ nav {
   padding-top: 4rem;
   padding-bottom: 4rem;
   justify-content: center;
-  .ursula {
-    font-size: 0.9rem;
-    font-style: italic;
-  }
+
   h2 {
     color: $dark;
   }
+
   .carousel {
     width: 90vw;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
@@ -280,33 +283,49 @@ nav {
     max-width: 40rem;
     .carousel-img {
       width: 40rem;
-      height: 25rem;
+      height: 20rem;
       object-fit: cover;
       object-position: center;
+      opacity: 0.3;
     }
     .carousel-caption {
-      background-color: rgba(0, 0, 0, 0.349);
-      backdrop-filter: blur(5px);
+      // background-color: rgba(0, 0, 0, 0.349);
+      // backdrop-filter: blur(5px);
       border-radius: 0.8rem;
-      max-height: 30vh;
+      height: 90%;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
       .quote {
         font-style: italic;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+      .ursula {
+        font-size: 1.1rem;
       }
     }
   }
+  //   .carousel-control-next,
+  // .carousel-control-prev /*, .carousel-indicators */ {
+  //     filter: invert(100%);
+  //   }
   .more-testimonials {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-      url("./images/testimonials/more-testimonials.png");
-    background-position: center;
-
-    background-size: cover;
-
-    width: 40rem;
-    max-width: 90vw;
-    height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    .btn-primary {
+      color: white;
+      font-size: 1.3rem;
+      width: unset;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+    .btn-primary:hover {
+      color: #345c91;
+    }
     h3 {
       font-size: 1.5rem;
       font-weight: 200;
@@ -314,14 +333,10 @@ nav {
       border: 1px solid rgba(255, 255, 255, 0.582);
       padding: 1rem;
     }
-    h3:hover {
-      border: 1px solid white;
-    }
+
     .test-link {
       text-decoration: none;
-    }
-    .test-link:hover {
-      scale: 1.02;
+      color: white;
     }
   }
 }
@@ -343,32 +358,26 @@ nav {
   }
   .about-content {
     display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    max-width: 60rem;
+  }
+  .about-text {
+    max-width: 30rem;
+    color: white;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  .about-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("./images/sean-about.JPG");
     background-position: center;
-    background-attachment: scroll;
+    min-width: 10rem;
     object-fit: cover;
-    font-size: 1.2rem;
-    p {
-      backdrop-filter: blur(5px);
-      font-size: 1.1rem;
-    }
-    background-repeat: no-repeat;
-    color: white;
-    max-width: 30rem;
-    background-color: $light;
-    border-radius: 1rem;
-    gap: 1rem;
-    padding: 2rem;
-    align-items: center;
-    justify-content: center;
+    width: 50vw;
+    background-size: cover;
+    display: block;
   }
-}
-
-.about-img {
-  width: 30vw;
-  height: 30vw;
-  object-fit: contain;
 }
 
 //CONTACT
@@ -389,6 +398,7 @@ nav {
   .contact-desc {
     color: $dark;
     text-align: center;
+    max-width: 80vw;
   }
 }
 .contact-methods {
@@ -423,15 +433,22 @@ nav {
   h3 {
     color: $dark;
     text-align: center;
+    font-weight: 700;
   }
   ul {
     width: 90vw;
     max-width: 40rem;
-  }
-  h2 {
+    list-style-image: url("./images/check-circle.svg");
     color: $dark;
-    text-align: center;
+    li {
+      margin-bottom: 2rem;
+      padding-left: 1rem;
+    }
   }
+}
+h2 {
+  color: $dark;
+  text-align: center;
 }
 
 //BENEFITS
@@ -459,7 +476,9 @@ nav {
 
   .benefits-img {
     width: 90vw;
-    max-width: 30rem;
+    max-width: 40rem;
+    background-color: white;
+    padding: 2rem;
   }
   .video {
     width: 90vw;
@@ -484,4 +503,26 @@ nav {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url("./images/hero-mobile.jpg");
   }
+  .about .about-img {
+    display: none;
+  }
+  .about .about-text {
+    text-align: center;
+  }
 }
+
+//TO DO
+/*
+1. Testimonials media query, more resonsive
+
+2. Clean up Benefits of music section (delete picture?)
+
+
+3. format Suzuki section
+
+4. Font selection
+
+
+
+
+*/

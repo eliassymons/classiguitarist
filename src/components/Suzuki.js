@@ -40,7 +40,7 @@ function Suzuki() {
         </li>
       </ul>
       <h3>
-        Visit my{" "}
+        View my{" "}
         <a
           href="https://suzukiassociation.org/people/sean-sanchez/"
           className="suzuki-link"

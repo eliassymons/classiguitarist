@@ -8,11 +8,11 @@ function Testimonials() {
   return (
     <div className="testimonials" id="testimonials">
       <h2>Testimonials</h2>
-      <Carousel>
+      <Carousel variant="dark">
         <Carousel.Item interval={6000}>
           <img className="carousel-img" src={test1} alt="first" />
           <Carousel.Caption>
-            <p className="ursula">
+            <p className="ursula quote">
               "This guitar teacher is a jewel and we are so lucky to have him!
               My daughter Lilliana (10 years old) plays classical guitar and has
               had several guitar teachers in the past. Sean definitely stands
@@ -71,7 +71,7 @@ function Testimonials() {
           target="_blank"
           className="test-link"
         >
-          <h3>More testimonials</h3>
+          <button className="btn-primary">More testimonials</button>
         </a>
       </div>
     </div>

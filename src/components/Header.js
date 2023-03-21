@@ -24,7 +24,7 @@ function Header() {
   const handleClose = () => setMenuOpen(false);
 
   return (
-    <Navbar expand="lg" sticky="top" collapseOnSelect>
+    <Navbar expand="md" sticky="top" collapseOnSelect>
       <Container fluid>
         <NavbarToggle
           aria-controls="offcanvasNavbar-expand-lg"
@@ -64,7 +64,7 @@ function Header() {
               >
                 Lessons
               </Link>
-              <Link
+              {/* <Link
                 className="link"
                 to="testimonials"
                 spy={true}
@@ -74,7 +74,7 @@ function Header() {
                 onClick={toggleMenu}
               >
                 Testimonials
-              </Link>
+              </Link> */}
               <Link
                 className="link"
                 to="about"
@@ -97,7 +97,7 @@ function Header() {
               >
                 Contact
               </Link>
-              <NavDropdown
+              {/* <NavDropdown
                 title="More"
                 id="basic-nav-dropdown"
                 className="link"
@@ -129,7 +129,7 @@ function Header() {
                     Benefits of Music
                   </Link>
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

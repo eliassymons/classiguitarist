@@ -11177,26 +11177,25 @@ nav .link {
   padding-bottom: 4rem;
   gap: 1.5rem;
 }
-.contact h3, .contact .h3 {
-  color: #caf0f8;
-}
 .contact .contact-desc {
   color: #345c91;
   text-align: center;
   max-width: 80vw;
+  font-size: 1.5rem;
 }
 
 .contact-methods {
-  background-color: #345c91;
+  color: #345c91;
   padding: 2rem;
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   gap: 1rem;
 }
 .contact-methods .contact-icon {
   width: 3rem;
+  filter: invert(34%) sepia(11%) saturate(2950%) hue-rotate(175deg) brightness(90%) contrast(86%);
+  opacity: 1;
 }
 
 .contact-item {
@@ -11204,6 +11203,11 @@ nav .link {
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  color: #345c91;
+}
+.contact-item h3, .contact-item .h3 {
+  color: #345c91;
+  font-weight: 600;
 }
 
 .suzuki {
